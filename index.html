@@ -4,10 +4,36 @@
     <title>Netlify rewrite test</title>
   </head>
   <body>
-    <h1>asset.png</h1>
-    <img src="asset.png" width="150"/>
-    <h1>./asset.png</h1>
-    <img src="./asset.png" width="150"/>
+    <table>
+      <tr>
+        <td>asset.png</td>
+        <td><img src="asset.png" width="15"/></td>
+      </tr>
+      <tr>
+        <td>./asset.png</td>
+        <td><img src="asset.png" width="15"/></td>
+      </tr>
+      <tr>
+        <td>root.css</td>
+        <td id="cssRoot"></td>
+      </tr>
+      <tr>
+        <td>./relative.css</td>
+        <td id="cssRelative"></td>
+      </tr>
+      <tr>
+        <td>root.js</td>
+        <td id="jsRoot"></td>
+      </tr>
+      <tr>
+        <td>relative.js</td>
+        <td id="jsRelative"></td>
+      </tr>
+    </table>
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="./relative.css">
+    <script src="root.js"></script>
+    <script src="./relative.js"></script>
   </body>
 </html>
 
